@@ -1,0 +1,31 @@
+{
+    "name": "mj-mockup-generator",
+    "version": "1.0.0",
+    "description": "Simple & easy to use mockup generator from MockupsJar",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mockup",
+        "generator",
+        "screenshot",
+        "device",
+        "api",
+        "mockupsjar"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mockupsjar/mj-mockup-generator"
+    },
+    "author": "bogdan@mockupsjar.com",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "request": "^2.88.0"
+    },
+    "devDependencies": {
+        "canvas": "^2.6.1",
+        "jest": "^25.1.0"
+    }
+}
