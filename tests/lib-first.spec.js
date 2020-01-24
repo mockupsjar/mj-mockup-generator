@@ -11,6 +11,12 @@ describe('mockup generator lib', () => {
 
                 expect(response.status).toBe('success');
                 expect(response.data).not.toBeNull();
+                expect(response.data).toHaveProperty('slug');
+                expect(response.data).toHaveProperty('name');
+                expect(response.data).toHaveProperty('fields');
+                expect(typeof response.data.slug).toBe('string');
+                expect(typeof response.data.name).toBe('string');
+                expect(typeof response.data.fields).toBe('object');
 
                 done();
             })
