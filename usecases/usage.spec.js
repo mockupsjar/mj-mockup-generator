@@ -2,7 +2,7 @@ const mockupGenerator = require('../index');
 
 describe.skip('mockup generator use cases', () => {
 
-    test('usage', async (ddone) => {
+    test('usage', async (done) => {
 
         const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
 
@@ -14,6 +14,7 @@ describe.skip('mockup generator use cases', () => {
 
         let response = await generator.render('iphone7-red', data);
         console.log('response', response);
+        return done();
         // {
         //     status: 'success',
         //         data: {
@@ -27,6 +28,26 @@ describe.skip('mockup generator use cases', () => {
         //             previewUrl: 'https://path.../renders/PcOniA1ANn6HLnX7-RFgaz9u5IiH7Ryud.jpg'
         //     }
         // }
+
+    }, 120000)
+
+    test('list all mockups', async (done) => {
+
+        const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+
+        let response = await generator.list();
+        console.log(response);
+        return done();
+
+    }, 120000)
+
+    test('get info about a mockup', async (done) => {
+
+        const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+
+        let response = await generator.getInfo('iphone7-red');
+        console.log(response);
+        return done();
 
     }, 120000)
 })
