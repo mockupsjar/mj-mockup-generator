@@ -1,3 +1,3 @@
 # mj-mockup-generator
 
-Simple & easy to use mockup generator from MockupsJar.
+Simple & easy to use mockup generator from MockupsJar
