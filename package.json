@@ -21,7 +21,7 @@
     "author": "bogdan@mockupsjar.com",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.18.0",
         "request": "^2.88.0"
     },
     "devDependencies": {
