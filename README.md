@@ -25,19 +25,6 @@ const data = {
 
 let response = await generator.render('iphone7-red', data);
 console.log('response', response);
-// {
-//     status: 'success',
-//         data: {
-//     slug: 'iphone7-red',
-//         name: 'iPhone7 RED',
-//         status: 'successful',
-//         zoomLevel: 0.5,
-//         format: 'jpg',
-//         result: {
-//              url: 'https:/path.../renders/mockup-z0yIcUtWFZjFyeNU.jpg',
-//              previewUrl: 'https://path.../renders/PcOniA1ANn6HLnX7-RFgaz9u5IiH7Ryud.jpg'
-//     }
-// }
 ```
 
 ![IPhone7 Red Mockuup](docs/iphone7-preview.jpg)
