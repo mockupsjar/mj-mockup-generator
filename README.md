@@ -27,8 +27,6 @@ let response = await generator.render('iphone7-red', data);
 console.log('response', response);
 ```
 
-![IPhone7 Red Mockuup](docs/iphone7-preview.jpg)
-
 ##### List all mockups
  
 ```js
