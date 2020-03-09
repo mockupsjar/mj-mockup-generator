@@ -11,6 +11,14 @@ Simple & easy to use mockup generator from MockupsJar
 $ npm install mj-mockup-generator
 ```
 
+## How to get a token
+
+- Register an user on https://mockupsjar.com/
+- Go to your profile page and generate a token https://mockupsjar.com/profile
+- Use the token with your preferred API tool or library ([Postman](https://www.postman.com/) or [Axios](https://github.com/axios/axios))
+
+Free Tier: 50 tasks for starting up & 10 extra free tasks / month
+
 ## Usage
 
 ```js
@@ -95,7 +103,8 @@ let task = await generator.render("iphone7-red", data);
 console.log(task);
 ```
 
-##### Resources
+## Resources
+
 [MockupsJar](https://mockupsjar.com/)
 
 [MockupsJar API Doc](https://mockupsjar.com/apidoc)
