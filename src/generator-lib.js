@@ -5,7 +5,7 @@ const request = require('request');
 
 class MockupGenerator {
     constructor(params) {
-        this.API_URL = params.host;
+        this.API_URL = params.host || 'https://api.mockupsjar.com';
         this.API_KEY = params.key;
         this.DEBUG = false;
     }

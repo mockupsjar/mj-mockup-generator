@@ -1,5 +1,5 @@
 const mockupGenerator = require('../index');
-const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 describe('mockup generator lib', () => {
 

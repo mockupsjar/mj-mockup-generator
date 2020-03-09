@@ -15,7 +15,7 @@ $ npm install mj-mockup-generator
 
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
@@ -31,7 +31,7 @@ console.log('response', response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 let response = await generator.list();
 console.log(response);
@@ -41,7 +41,7 @@ console.log(response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 let response = await generator.getInfo('iphone7-red');
 console.log(response);
@@ -51,7 +51,7 @@ console.log(response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
@@ -67,7 +67,7 @@ console.log(task);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
@@ -83,7 +83,7 @@ console.log(task);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({host: process.env.API_URL, key: process.env.API_TOKEN});
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
@@ -94,3 +94,10 @@ const data = {
 let task = await generator.render("iphone7-red", data);
 console.log(task);
 ```
+
+##### Resources
+[MockupsJar](https://mockupsjar.com/)
+
+[MockupsJar API Doc](https://mockupsjar.com/apidoc)
+
+[MockupsJar NPM Package](https://www.npmjs.com/package/mj-mockup-generator)
