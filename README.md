@@ -25,7 +25,7 @@ OR
 
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({key: process.env.API_TOKEN});
+const generator = new mockupGenerator(); // OR {key: process.env.API_TOKEN}
 
 const data = {
     zoomLevel: 0.5,
@@ -41,7 +41,7 @@ console.log('response', response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({key: process.env.API_TOKEN});
+const generator = new mockupGenerator();
 
 let response = await generator.list();
 console.log(response);
@@ -51,7 +51,7 @@ console.log(response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({key: process.env.API_TOKEN});
+const generator = new mockupGenerator();
 
 let response = await generator.getInfo('iphone7-red');
 console.log(response);
@@ -61,7 +61,7 @@ console.log(response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({key: process.env.API_TOKEN});
+const generator = new mockupGenerator();
 
 const data = {
     zoomLevel: 0.5,
@@ -77,7 +77,7 @@ console.log(task);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({key: process.env.API_TOKEN});
+const generator = new mockupGenerator();
 
 const data = {
     zoomLevel: 0.5,
@@ -93,7 +93,7 @@ console.log(task);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator({key: process.env.API_TOKEN});
+const generator = new mockupGenerator();
 
 const data = {
     zoomLevel: 0.5,
