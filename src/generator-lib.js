@@ -3,10 +3,12 @@ const path = require('path');
 const axios = require('axios');
 const request = require('request');
 
+const MJ_DEFAULT_HOST = 'https://api.mockupsjar.com';
+
 class MockupGenerator {
     constructor(params) {
-        this.API_URL = params.host || 'https://api.mockupsjar.com';
-        this.API_KEY = params.key;
+        this.API_URL = params ? params.host || MJ_DEFAULT_HOST : MJ_DEFAULT_HOST;
+        this.API_KEY = params ? params.key: '';
         this.DEBUG = false;
     }
 
@@ -19,7 +21,7 @@ class MockupGenerator {
                 method: 'get',
                 url: `${this.API_URL}/mockups/list`,
                 headers: {
-                    'Authorization': 'Bearer ' + this.API_KEY
+                    'Authorization': this.API_KEY ? 'Bearer ' + this.API_KEY : ''
                 }
             })
                 .then((response) => {
@@ -43,7 +45,7 @@ class MockupGenerator {
                 method: 'get',
                 url: `${this.API_URL}/mockups/getinfo/${mockupName}`,
                 headers: {
-                    'Authorization': 'Bearer ' + this.API_KEY
+                    'Authorization': this.API_KEY ? 'Bearer ' + this.API_KEY : ''
                 }
             })
                 .then((response) => {
@@ -67,7 +69,7 @@ class MockupGenerator {
                 method: 'post',
                 url: `${this.API_URL}/mockups/render/${mockupName}`,
                 headers: {
-                    'Authorization': 'Bearer ' + this.API_KEY
+                    'Authorization': this.API_KEY ? 'Bearer ' + this.API_KEY : ''
                 },
                 data: data
             })
