@@ -13,12 +13,6 @@ $ npm install mj-mockup-generator
 
 ## How to use the library
 
-User our Free API
-
-- Use our Free API Tier with 10 tasks /hour
-
-Or
-
 - Register an user on https://mockupsjar.com/
 - Go to your profile page and generate a token https://mockupsjar.com/profile
 - Use the token with your preferred API tool or library (this npm package or [Postman](https://www.postman.com/) or [Axios](https://github.com/axios/axios))
