@@ -4,7 +4,9 @@
     "description": "Simple & easy to use mockup generator from MockupsJar",
     "main": "index.js",
     "scripts": {
-        "test": "jest --ci"
+        "test": "jest --ci",
+        "ver-new": "npm version patch",
+        "ver-publish": "npm publish"
     },
     "keywords": [
         "mockup",
@@ -26,6 +28,6 @@
     },
     "devDependencies": {
         "canvas": "^2.6.1",
-        "jest": "^25.4.0"
+        "jest": "^25.5.4"
     }
 }
