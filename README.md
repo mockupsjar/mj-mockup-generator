@@ -103,8 +103,10 @@ console.log(task);
 
 ## Resources
 
-[MockupsJar](https://mockupsjar.com/)
+[MockupsJar - MockupsJar website](https://mockupsjar.com/)
 
-[MockupsJar API Doc](https://mockupsjar.com/apidoc)
+[MockupsJar API Intro - quick introduction](https://mockupsjar.com/api)
+
+[MockupsJar API Doc - full API documentation](https://mockupsjar.com/apidoc)
 
 [MockupsJar NPM Package](https://www.npmjs.com/package/mj-mockup-generator)
