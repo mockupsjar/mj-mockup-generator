@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "jest --ci",
-        "ver-new": "npm version patch && git push origin master",
-        "ver-publish": "npm publish"
+        "package-release": "npm version patch && git push origin master",
+        "package-publish": "npm publish"
     },
     "keywords": [
         "mockup",
