@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest --ci",
-        "ver-new": "npm version patch && git push master",
+        "ver-new": "npm version patch && git push origin master",
         "ver-publish": "npm publish"
     },
     "keywords": [
