@@ -28,6 +28,6 @@
     },
     "devDependencies": {
         "canvas": "^2.6.1",
-        "jest": "^26.1.0"
+        "jest": "^26.4.0"
     }
 }
