@@ -13,15 +13,15 @@ $ npm install mj-mockup-generator
 
 ## How to use the library
 
-- Register an user on https://mockupsjar.com/
-- Go to your profile page and generate a token https://mockupsjar.com/profile
-- Use the token with your preferred API tool or library (this npm package or [Postman](https://www.postman.com/) or [Axios](https://github.com/axios/axios))
+- Register a user on https://mockupsjar.com/
+- Go to your profile page and generate a key https://mockupsjar.com/profile
+- Use the key with your preferred API tool or library (this package, [Postman](https://www.postman.com/), [Axios](https://github.com/axios/axios))
 
 ## Usage
 
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator(); // OR {key: process.env.API_TOKEN}
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
@@ -37,17 +37,17 @@ console.log('response', response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator();
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 let response = await generator.list();
 console.log(response);
  ```
  
-##### Get info about a mockup
+##### Get info about a specific mockup
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator();
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 let response = await generator.getInfo('iphone7-red');
 console.log(response);
@@ -57,7 +57,7 @@ console.log(response);
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator();
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
@@ -69,11 +69,11 @@ let task = await generator.render("iphone7-red", data);
 console.log(task);
 ```
 
-##### Render mockup with image
+##### Render mockup with input image
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator();
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
@@ -85,11 +85,11 @@ let task = await generator.render("iphone7-red", data);
 console.log(task);
 ```
 
-##### Render mockup with website
+##### Render mockup with input website url
  
 ```js
 const mockupGenerator = require('mj-mockup-generator');
-const generator = new mockupGenerator();
+const generator = new mockupGenerator({key: process.env.API_TOKEN});
 
 const data = {
     zoomLevel: 0.5,
