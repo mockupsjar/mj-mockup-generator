@@ -27,7 +27,7 @@
         "request": "^2.88.2"
     },
     "devDependencies": {
-        "canvas": "^2.6.1",
+        "canvas": "^2.7.0",
         "jest": "^26.6.3",
         "prettier": "^2.2.1"
     }
