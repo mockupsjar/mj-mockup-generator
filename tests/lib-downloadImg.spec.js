@@ -3,7 +3,7 @@ const mockupGenerator = require('../index')
 const generator = new mockupGenerator({ host: process.env.API_URL, key: process.env.API_TOKEN })
 
 describe('mockup generator lib', () => {
-    test('render and download image', async (done) => {
+    test('render and download image', async () => {
         const data = {
             zoomLevel: 0.5,
             format: 'jpg',
@@ -22,7 +22,5 @@ describe('mockup generator lib', () => {
         console.log('download path', imagePath)
 
         if (fs.existsSync(imagePath)) fs.unlinkSync(imagePath)
-
-        done()
     }, 120000)
 })

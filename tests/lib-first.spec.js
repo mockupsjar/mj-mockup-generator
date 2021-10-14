@@ -21,6 +21,7 @@ describe('mockup generator lib', () => {
             })
             .catch((e) => {
                 console.log('exception', e)
+                expect(e).toBeNull()
                 done(e)
             })
     })
