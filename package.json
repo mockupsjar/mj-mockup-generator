@@ -1,6 +1,6 @@
 {
     "name": "mj-mockup-generator",
-    "version": "1.0.28",
+    "version": "1.0.29",
     "description": "Simple & easy to use mockup generator from MockupsJar",
     "main": "index.js",
     "scripts": {
