@@ -23,12 +23,12 @@
     "author": "bogdan@mockupsjar.com",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.25.0",
+        "axios": "^0.26.0",
         "request": "^2.88.2"
     },
     "devDependencies": {
         "canvas": "^2.9.0",
-        "jest": "^27.5.0",
+        "jest": "^27.5.1",
         "prettier": "^2.5.1"
     }
 }
