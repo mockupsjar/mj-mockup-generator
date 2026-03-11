@@ -1,7 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 const axios = require('axios')
-const request = require('request')
 
 const MJ_DEFAULT_HOST = 'https://api.mockupsjar.com'
 
@@ -62,10 +61,11 @@ class MockupGenerator {
     downloadImage(url, filename) {
         if (this.DEBUG) console.log(`downloadImage url=${url} filename=${filename}`)
 
-        return new Promise((resolve, reject) => {
-            request.head(url, function (err, res, body) {
-                const contentType = res.headers['content-type']
-                const contentLength = res.headers['content-length']
+        return new Promise(async (resolve, reject) => {
+            try {
+                const headResponse = await axios.head(url)
+                const contentType = headResponse.headers['content-type']
+                const contentLength = headResponse.headers['content-length']
 
                 // Build filename from uri
                 if (!filename) filename = url.split('/').pop()
@@ -76,12 +76,15 @@ class MockupGenerator {
                 }
 
                 if (contentType && contentLength) {
-                    request(url)
+                    const response = await axios({ method: 'get', url, responseType: 'stream' })
+                    response.data
                         .pipe(fs.createWriteStream(filename))
                         .on('close', () => resolve(path.resolve(filename)))
                         .on('error', (err) => reject(err))
                 }
-            })
+            } catch (e) {
+                reject(e)
+            }
         })
     }
 }
